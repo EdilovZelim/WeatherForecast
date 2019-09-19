@@ -61,7 +61,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             case .Success(let currentWeather):
                 self.updateUIWith(currentWeather: currentWeather)
             case .Failure(let error as NSError):
-                let alertController = UIAlertController(title: "Unable to get data", message: "\(error.localizedDescription)", preferredStyle: .alert)
+                let alertController = UIAlertController(title: "Unable to get data!", message: "\(error.localizedDescription)", preferredStyle: .alert)
                 let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
                 alertController.addAction(okAction)
                 self.present(alertController, animated: true, completion: nil)
