@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Weather_Forecast" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snow" translatesAutoresizingMaskIntoConstraints="NO" id="qVA-0q-rPT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Russia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3m-ay-suf">
+                                <rect key="frame" x="115" y="43" width="144" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="0.18241087483626284" blue="0.80792337151537064" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30˚C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4g-hm-b25">
+                                <rect key="frame" x="0.0" y="98" width="375" height="179.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="150"/>
+                                <color key="textColor" red="1" green="0.18241087480000001" blue="0.80792337150000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQJ-uU-eoH">
+                                <rect key="frame" x="123" y="519" width="128" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Refresh">
+                                    <color key="titleColor" red="1" green="0.18241087480000001" blue="0.80792337150000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="refreshButtonTapp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T2V-Td-D5v"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="FUQ-F8-z05">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qVA-0q-rPT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="29h-Xy-QkA"/>
+                            <constraint firstItem="F4g-hm-b25" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3YY-XK-Wy3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FUQ-F8-z05" secondAttribute="trailing" constant="178" id="8tr-gD-Z8o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bQJ-uU-eoH" secondAttribute="trailing" constant="124" id="9AE-wr-W13"/>
+                            <constraint firstItem="bQJ-uU-eoH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="123" id="EDP-Co-E59"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bQJ-uU-eoH" secondAttribute="bottom" constant="109" id="Ju4-dn-DOl"/>
+                            <constraint firstItem="F4g-hm-b25" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="URm-4h-cJ7"/>
+                            <constraint firstItem="qVA-0q-rPT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YEr-ud-oOi"/>
+                            <constraint firstItem="c3m-ay-suf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="23" id="Yeq-hB-a0f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c3m-ay-suf" secondAttribute="trailing" constant="116" id="aSo-S5-DiU"/>
+                            <constraint firstItem="c3m-ay-suf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="115" id="c0M-p3-0ej"/>
+                            <constraint firstItem="qVA-0q-rPT" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="csz-vw-8I4"/>
+                            <constraint firstItem="bQJ-uU-eoH" firstAttribute="top" secondItem="FUQ-F8-z05" secondAttribute="bottom" constant="176" id="ktR-Be-GXs"/>
+                            <constraint firstItem="FUQ-F8-z05" firstAttribute="top" secondItem="F4g-hm-b25" secondAttribute="bottom" constant="45.5" id="nZJ-lw-N5Z"/>
+                            <constraint firstItem="F4g-hm-b25" firstAttribute="top" secondItem="c3m-ay-suf" secondAttribute="bottom" constant="26" id="ns0-mO-Xla"/>
+                            <constraint firstItem="FUQ-F8-z05" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="177" id="p3X-so-eys"/>
+                            <constraint firstItem="qVA-0q-rPT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="tHL-Ds-Mj9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="FUQ-F8-z05" id="tHy-WU-mZS"/>
+                        <outlet property="imageView" destination="qVA-0q-rPT" id="tUI-jZ-NqG"/>
+                        <outlet property="locLabel" destination="c3m-ay-suf" id="1M6-Kf-xer"/>
+                        <outlet property="refreshButton" destination="bQJ-uU-eoH" id="1U9-Rz-LmL"/>
+                        <outlet property="temperatureLabel" destination="F4g-hm-b25" id="ufj-Ck-tPe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="snow" width="647" height="485"/>
+    </resources>
+</document>
